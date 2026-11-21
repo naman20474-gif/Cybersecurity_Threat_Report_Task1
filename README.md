@@ -3,7 +3,7 @@
 **Author:** Naman Verma | **Role:** Cybersecurity Analyst Intern | **Org:** Maincrafts Technology | **Date:** Nov 21, 2026
 
 ## Deliverables
-- **Live Portfolio:** [`portfolio_website/index.html`](portfolio_website/index.html) — Responsive site with threat analysis, risk matrix, defense architecture, checklist, references
+- **Live Portfolio:** [`[portfolio_website/index.htm](https://cybersecuritythreatreporttask1.vercel.app/)l`](portfolio_website/index.html) — Responsive site with threat analysis, risk matrix, defense architecture, checklist, references
 - **PDF Report:** [`portfolio_website/Cybersecurity_Threat_Report_Task1_Naman Verma.pdf`](portfolio_website/Cybersecurity_Threat_Report_Task1_Naman Verma.pdf) — 12-page professional report with 5 embedded diagrams (300 DPI)
 
 ## View
