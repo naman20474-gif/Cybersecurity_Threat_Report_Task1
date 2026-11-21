@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-labelledby="trend-title trend-desc">
+  <title id="trend-title">Threat Landscape Trends: 2024–2025 Quarterly Indicators</title>
+  <desc id="trend-desc">Line chart showing quarterly trends for five threat categories across 2024-2025. AI phishing and ransomware show steep increases. Cloud misconfigurations remain high. IoT and zero-day exploits show moderate growth.</desc>
+  <defs>
+    <linearGradient id="phishGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    <linearGradient id="raasGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="iotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <linearGradient id="zeroGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="lineGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#FAFAFA"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#E5E7EB" stroke-width="1">
+    <!-- Horizontal grid lines -->
+    <line x1="80" y1="60" x2="720" y2="60"/>
+    <line x1="80" y1="125" x2="720" y2="125"/>
+    <line x1="80" y1="190" x2="720" y2="190"/>
+    <line x1="80" y1="255" x2="720" y2="255"/>
+    <line x1="80" y1="320" x2="720" y2="320"/>
+    <!-- Vertical grid lines -->
+    <line x1="80" y1="60" x2="80" y2="320"/>
+    <line x1="220" y1="60" x2="220" y2="320"/>
+    <line x1="360" y1="60" x2="360" y2="320"/>
+    <line x1="500" y1="60" x2="500" y2="320"/>
+    <line x1="640" y1="60" x2="640" y2="320"/>
+    <line x1="720" y1="60" x2="720" y2="320"/>
+  </g>
+  
+  <!-- Y-axis labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6B7280" text-anchor="end">
+    <text x="70" y="64">100</text>
+    <text x="70" y="129">80</text>
+    <text x="70" y="194">60</text>
+    <text x="70" y="259">40</text>
+    <text x="70" y="324">20</text>
+    <text x="70" y="350" font-size="10" fill="#9CA3AF">Relative Activity Index</text>
+  </g>
+  
+  <!-- X-axis labels (quarters) -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">
+    <text x="80" y="340">Q1'24</text>
+    <text x="220" y="340">Q2'24</text>
+    <text x="360" y="340">Q3'24</text>
+    <text x="500" y="340">Q4'24</text>
+    <text x="640" y="340">Q1'25</text>
+    <text x="720" y="340">Q2'25</text>
+  </g>
+  
+  <!-- Data points: [Q1'24, Q2'24, Q3'24, Q4'24, Q1'25, Q2'25] -->
+  <!-- AI Phishing: 45, 58, 72, 85, 92, 98 -->
+  <!-- RaaS: 50, 55, 62, 70, 78, 85 -->
+  <!-- Cloud: 65, 68, 70, 72, 75, 76 -->
+  <!-- IoT: 35, 42, 48, 55, 58, 62 -->
+  <!-- Zero-day: 40, 48, 55, 62, 68, 72 -->
+  
+  <g filter="url(#lineGlow)">
+    <!-- AI Phishing line -->
+    <path d="M 80 202 C 150 142, 290 82, 360 46 C 430 10, 570 22, 640 10 C 710 -2, 720 6, 720 6" 
+          fill="none" stroke="url(#phishGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- RaaS line -->
+    <path d="M 80 184 C 150 169, 290 130, 360 102 C 430 74, 570 42, 640 30 C 710 18, 720 12, 720 12" 
+          fill="none" stroke="url(#raasGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Cloud line -->
+    <path d="M 80 124 C 150 112, 290 104, 360 99 C 430 94, 570 86, 640 83 C 710 80, 720 78, 720 78" 
+          fill="none" stroke="url(#cloudGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- IoT line -->
+    <path d="M 80 244 C 150 217, 290 193, 360 168 C 430 143, 570 130, 640 124 C 710 118, 720 115, 720 115" 
+          fill="none" stroke="url(#iotGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Zero-day line -->
+    <path d="M 80 220 C 150 188, 290 154, 360 128 C 430 102, 570 84, 640 78 C 710 72, 720 70, 720 70" 
+          fill="none" stroke="url(#zeroGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Data points -->
+  <g>
+    <!-- AI Phishing points -->
+    <g fill="#00D4FF">
+      <circle cx="80" cy="202" r="4"/><circle cx="220" cy="142" r="4"/><circle cx="360" cy="82" r="4"/>
+      <circle cx="500" cy="46" r="4"/><circle cx="640" cy="10" r="4"/><circle cx="720" cy="6" r="4"/>
+    </g>
+    <!-- RaaS points -->
+    <g fill="#EF4444">
+      <circle cx="80" cy="184" r="4"/><circle cx="220" cy="169" r="4"/><circle cx="360" cy="130" r="4"/>
+      <circle cx="500" cy="102" r="4"/><circle cx="640" cy="42" r="4"/><circle cx="720" cy="12" r="4"/>
+    </g>
+    <!-- Cloud points -->
+    <g fill="#F97316">
+      <circle cx="80" cy="124" r="4"/><circle cx="220" cy="112" r="4"/><circle cx="360" cy="99" r="4"/>
+      <circle cx="500" cy="94" r="4"/><circle cx="640" cy="83" r="4"/><circle cx="720" cy="78" r="4"/>
+    </g>
+    <!-- IoT points -->
+    <g fill="#22C55E">
+      <circle cx="80" cy="244" r="4"/><circle cx="220" cy="217" r="4"/><circle cx="360" cy="193" r="4"/>
+      <circle cx="500" cy="168" r="4"/><circle cx="640" cy="124" r="4"/><circle cx="720" cy="115" r="4"/>
+    </g>
+    <!-- Zero-day points -->
+    <g fill="#A855F7">
+      <circle cx="80" cy="220" r="4"/><circle cx="220" cy="188" r="4"/><circle cx="360" cy="154" r="4"/>
+      <circle cx="500" cy="128" r="4"/><circle cx="640" cy="78" r="4"/><circle cx="720" cy="70" r="4"/>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#374151">
+    <g transform="translate(580, 60)">
+      <rect x="0" y="0" width="200" height="120" fill="white" stroke="#E5E7EB" rx="4"/>
+      <text x="10" y="20" font-size="12" font-weight="600" fill="#111827">Threat Category</text>
+      <g transform="translate(10, 30)">
+        <line x1="0" y1="2" x2="16" y2="2" stroke="#00D4FF" stroke-width="2.5"/>
+        <text x="22" y="6" font-size="10">AI Phishing (+118%)</text>
+        <line x1="0" y1="22" x2="16" y2="22" stroke="#EF4444" stroke-width="2.5"/>
+        <text x="22" y="26" font-size="10">RaaS (+70%)</text>
+        <line x1="0" y1="42" x2="16" y2="42" stroke="#F97316" stroke-width="2.5"/>
+        <text x="22" y="46" font-size="10">Cloud Misconfig (+17%)</text>
+        <line x1="0" y1="62" x2="16" y2="62" stroke="#22C55E" stroke-width="2.5"/>
+        <text x="22" y="66" font-size="10">IoT (+77%)</text>
+        <line x1="0" y1="82" x2="16" y2="82" stroke="#A855F7" stroke-width="2.5"/>
+        <text x="22" y="86" font-size="10">Zero-Day (+80%)</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="80" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#0B1D3A">Quarterly Threat Activity Index (2024–2025)</text>
+  <text x="80" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#6B7280">Relative activity normalized to Q1 2024 baseline. Sources: CISA, FBI, Microsoft, IBM, Google/Mandiant, Verizon, ENISA.</text>
+</svg>

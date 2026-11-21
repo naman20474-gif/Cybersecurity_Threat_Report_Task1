@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" role="img" aria-labelledby="comp-title comp-desc">
+  <title id="comp-title">Comparative Threat Matrix: Five Threats Across Key Dimensions</title>
+  <desc id="comp-desc">Table comparing five threats across primary attack surface, potential impact, priority rating, and key defensive strategy. AI Phishing, RaaS, and Zero-Day are Critical priority. Cloud and IoT are High priority.</desc>
+  <defs>
+    <linearGradient id="critRow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF2F2"/>
+      <stop offset="100%" stop-color="#FEE2E2"/>
+    </linearGradient>
+    <linearGradient id="highRow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="100%" stop-color="#FFEDD5"/>
+    </linearGradient>
+    <filter id="rowHover" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="520" fill="#FAFAFA"/>
+  
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#111827">
+    <!-- Header row -->
+    <rect x="0" y="0" width="1000" height="56" fill="#0B1D3A"/>
+    <text x="20" y="35" font-size="13" font-weight="600" fill="white">Threat</text>
+    <text x="220" y="35" font-size="13" font-weight="600" fill="white" text-anchor="middle">Primary Attack Surface</text>
+    <text x="470" y="35" font-size="13" font-weight="600" fill="white" text-anchor="middle">Potential Impact</text>
+    <text x="720" y="35" font-size="13" font-weight="600" fill="white" text-anchor="middle">Priority</text>
+    <text x="880" y="35" font-size="13" font-weight="600" fill="white" text-anchor="middle">Key Defensive Strategy</text>
+    
+    <!-- Row 1: AI Phishing -->
+    <rect x="0" y="56" width="1000" height="88" fill="url(#critRow)"/>
+    <text x="20" y="96" font-size="12" font-weight="600" fill="#0B1D3A">AI-Powered Phishing & Social Engineering</text>
+    <text x="20" y="118" font-size="11" fill="#4B5563">Generative AI enabling hyper-personalized, scalable deception across email, voice, video</text>
+    <text x="220" y="96" font-size="11" fill="#374151" text-anchor="middle">Human (email, voice, video, messaging)</text>
+    <text x="470" y="96" font-size="11" fill="#374151" text-anchor="middle">Credential theft, BEC, data breach, financial fraud, identity theft</text>
+    <rect x="700" y="74" width="80" height="30" rx="4" fill="#FEF2F2" stroke="#FECACA"/>
+    <text x="740" y="94" font-size="11" font-weight="600" fill="#991B1B" text-anchor="middle">CRITICAL</text>
+    <text x="880" y="96" font-size="11" fill="#374151" text-anchor="middle">FIDO2 MFA, AI email security, deepfake training, out-of-band verification</text>
+    
+    <!-- Row 2: RaaS -->
+    <rect x="0" y="144" width="1000" height="88" fill="white"/>
+    <text x="20" y="184" font-size="12" font-weight="600" fill="#0B1D3A">Ransomware-as-a-Service (RaaS)</text>
+    <text x="20" y="206" font-size="11" fill="#4B5563">Commoditized ransomware lowering barriers for affiliates via operator-affiliate model</text>
+    <text x="220" y="184" font-size="11" fill="#374151" text-anchor="middle">Endpoints, servers, identity, backups</text>
+    <text x="470" y="184" font-size="11" fill="#374151" text-anchor="middle">Operational paralysis, data theft/leak, extortion, regulatory fines, reputation loss</text>
+    <rect x="700" y="162" width="80" height="30" rx="4" fill="#FEF2F2" stroke="#FECACA"/>
+    <text x="740" y="182" font-size="11" font-weight="600" fill="#991B1B" text-anchor="middle">CRITICAL</text>
+    <text x="880" y="184" font-size="11" fill="#374151" text-anchor="middle">Immutable offline backups, MFA everywhere, segmentation, EDR, ransomware IR plan</text>
+    
+    <!-- Row 3: Cloud -->
+    <rect x="0" y="232" width="1000" height="88" fill="url(#highRow)"/>
+    <text x="20" y="272" font-size="12" font-weight="600" fill="#0B1D3A">Cloud Security Misconfigurations</text>
+    <text x="20" y="294" font-size="11" fill="#4B5563">Configuration errors in cloud environments exposing data at scale under shared responsibility</text>
+    <text x="220" y="272" font-size="11" fill="#374151" text-anchor="middle">Cloud control plane, storage, IAM, network</text>
+    <text x="470" y="272" font-size="11" fill="#374151" text-anchor="middle">Mass data exposure, compliance violations, cryptojacking, supply chain risk</text>
+    <rect x="700" y="250" width="80" height="30" rx="4" fill="#FFF7ED" stroke="#FED7AA"/>
+    <text x="740" y="270" font-size="11" font-weight="600" fill="#9A3412" text-anchor="middle">HIGH</text>
+    <text x="880" y="272" font-size="11" fill="#374151" text-anchor="middle">IaC scanning, CSPM, least-privilege IAM, SCPs, encryption by default, monitoring</text>
+    
+    <!-- Row 4: IoT -->
+    <rect x="0" y="320" width="1000" height="88" fill="white"/>
+    <text x="20" y="360" font-size="12" font-weight="600" fill="#0B1D3A">IoT Vulnerabilities</text>
+    <text x="20" y="382" font-size="11" fill="#4B5563">Insecure connected devices as entry points, botnet infrastructure, nation-state pre-positioning</text>
+    <text x="220" y="360" font-size="11" fill="#374151" text-anchor="middle">Network devices, cameras, sensors, OT</text>
+    <text x="470" y="360" font-size="11" fill="#374151" text-anchor="middle">Botnet recruitment, lateral movement, physical disruption, espionage</text>
+    <rect x="700" y="338" width="80" height="30" rx="4" fill="#FFF7ED" stroke="#FED7AA"/>
+    <text x="740" y="358" font-size="11" font-weight="600" fill="#9A3412" text-anchor="middle">HIGH</text>
+    <text x="880" y="360" font-size="11" fill="#374151" text-anchor="middle">Segmentation, device inventory/lifecycle, secure config, firmware automation, NBAD</text>
+    
+    <!-- Row 5: Zero-Day -->
+    <rect x="0" y="408" width="1000" height="88" fill="url(#critRow)"/>
+    <text x="20" y="448" font-size="12" font-weight="600" fill="#0B1D3A">Zero-Day Exploits</text>
+    <text x="20" y="470" font-size="11" fill="#4B5563">Unknown vulnerabilities exploited before patches exist, targeting edge infrastructure and trust layer</text>
+    <text x="220" y="448" font-size="11" fill="#374151" text-anchor="middle">Internet-facing appliances, browsers, identity providers, supply chain</text>
+    <text x="470" y="448" font-size="11" fill="#374151" text-anchor="middle">Stealthy initial access, persistent compromise, mass exploitation, supply chain impact</text>
+    <rect x="700" y="426" width="80" height="30" rx="4" fill="#FEF2F2" stroke="#FECACA"/>
+    <text x="740" y="446" font-size="11" font-weight="600" fill="#991B1B" text-anchor="middle">CRITICAL</text>
+    <text x="880" y="448" font-size="11" fill="#374151" text-anchor="middle">Attack surface reduction (ZTNA), rapid patching + compromise assumption, egress monitoring, behavioral detection, threat intel</text>
+  </g>
+  
+  <!-- Column dividers -->
+  <g stroke="#E5E7EB" stroke-width="1">
+    <line x1="200" y1="0" x2="200" y2="496"/>
+    <line x1="440" y1="0" x2="440" y2="496"/>
+    <line x1="680" y1="0" x2="680" y2="496"/>
+    <line x1="860" y1="0" x2="860" y2="496"/>
+  </g>
+  
+  <!-- Row dividers -->
+  <g stroke="#E5E7EB" stroke-width="0.5">
+    <line x1="0" y1="56" x2="1000" y2="56"/>
+    <line x1="0" y1="144" x2="1000" y2="144"/>
+    <line x1="0" y1="232" x2="1000" y2="232"/>
+    <line x1="0" y1="320" x2="1000" y2="320"/>
+    <line x1="0" y1="408" x2="1000" y2="408"/>
+    <line x1="0" y1="496" x2="1000" y2="496"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(20, 500)">
+    <text x="0" y="0" font-size="10" font-weight="500" fill="#6B7280">Priority ratings are qualitative analyst judgments for a hypothetical SME, not measured risk scores.</text>
+  </g>
+</svg>

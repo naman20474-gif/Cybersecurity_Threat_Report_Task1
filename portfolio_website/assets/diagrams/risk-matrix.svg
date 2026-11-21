@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" width="700" height="600" role="img" aria-labelledby="risk-title risk-desc">
+  <title id="risk-title">5×5 Risk Matrix: Likelihood vs Impact for Five Threat Categories</title>
+  <desc id="risk-desc">A 5x5 risk matrix plotting five threats on likelihood (1-5) vs impact (1-5) axes. AI Phishing and RaaS are Critical (score 20). Cloud Misconfiguration is Critical (16). Zero-Day is High (15). IoT is Medium (9). Each cell colored by risk level.</desc>
+  <defs>
+    <linearGradient id="lowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+    <linearGradient id="medGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEFCE8"/>
+      <stop offset="100%" stop-color="#FEF9C3"/>
+    </linearGradient>
+    <linearGradient id="highGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="100%" stop-color="#FFEDD5"/>
+    </linearGradient>
+    <linearGradient id="critGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF2F2"/>
+      <stop offset="100%" stop-color="#FEE2E2"/>
+    </linearGradient>
+    <filter id="cellShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="600" fill="#FAFAFA"/>
+  
+  <!-- Matrix grid: 5x5 cells, each 80x80, starting at (100, 80) -->
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <!-- Y-axis: Likelihood (bottom to top: 1 to 5) -->
+    <g fill="#374151" font-size="12" font-weight="500" text-anchor="end">
+      <text x="90" y="460">5  Almost Certain</text>
+      <text x="90" y="380">4  Likely</text>
+      <text x="90" y="300">3  Possible</text>
+      <text x="90" y="220">2  Unlikely</text>
+      <text x="90" y="140">1  Rare</text>
+    </g>
+    <text x="50" y="270" fill="#374151" font-size="12" font-weight="500" text-anchor="middle" transform="rotate(-90, 50, 270)">LIKELIHOOD</text>
+    
+    <!-- X-axis: Impact (left to right: 1 to 5) -->
+    <g fill="#374151" font-size="12" font-weight="500" text-anchor="middle">
+      <text x="140" y="510">1  Negligible</text>
+      <text x="220" y="510">2  Minor</text>
+      <text x="300" y="510">3  Moderate</text>
+      <text x="380" y="510">4  Major</text>
+      <text x="460" y="510">5  Catastrophic</text>
+    </g>
+    <text x="300" y="555" fill="#374151" font-size="12" font-weight="500">IMPACT</text>
+    
+    <!-- Matrix cells -->
+    <g transform="translate(100, 80)">
+      <!-- Row 5 (Likelihood 5) - y=0 -->
+      <rect x="0"   y="0"   width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="80"  y="0"   width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="160" y="0"   width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="240" y="0"   width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="320" y="0"   width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      
+      <!-- Row 4 (Likelihood 4) - y=80 -->
+      <rect x="0"   y="80"  width="80" height="80" fill="url(#highGrad)" filter="url(#cellShadow)" stroke="#FED7AA" stroke-width="1"/>
+      <rect x="80"  y="80"  width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="160" y="80"  width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="240" y="80"  width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      <rect x="320" y="80"  width="80" height="80" fill="url(#highGrad)" filter="url(#cellShadow)" stroke="#FED7AA" stroke-width="1"/>
+      
+      <!-- Row 3 (Likelihood 3) - y=160 -->
+      <rect x="0"   y="160" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+      <rect x="80"  y="160" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+      <rect x="160" y="160" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+      <rect x="240" y="160" width="80" height="80" fill="url(#highGrad)" filter="url(#cellShadow)" stroke="#FED7AA" stroke-width="1"/>
+      <rect x="320" y="160" width="80" height="80" fill="url(#critGrad)" filter="url(#cellShadow)" stroke="#FECACA" stroke-width="1"/>
+      
+      <!-- Row 2 (Likelihood 2) - y=240 -->
+      <rect x="0"   y="240" width="80" height="80" fill="url(#lowGrad)" filter="url(#cellShadow)" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="80"  y="240" width="80" height="80" fill="url(#lowGrad)" filter="url(#cellShadow)" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="160" y="240" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+      <rect x="240" y="240" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+      <rect x="320" y="240" width="80" height="80" fill="url(#highGrad)" filter="url(#cellShadow)" stroke="#FED7AA" stroke-width="1"/>
+      
+      <!-- Row 1 (Likelihood 1) - y=320 -->
+      <rect x="0"   y="320" width="80" height="80" fill="url(#lowGrad)" filter="url(#cellShadow)" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="80"  y="320" width="80" height="80" fill="url(#lowGrad)" filter="url(#cellShadow)" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="160" y="320" width="80" height="80" fill="url(#lowGrad)" filter="url(#cellShadow)" stroke="#BBF7D0" stroke-width="1"/>
+      <rect x="240" y="320" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+      <rect x="320" y="320" width="80" height="80" fill="url(#medGrad)" filter="url(#cellShadow)" stroke="#FDE047" stroke-width="1"/>
+    </g>
+    
+    <!-- Threat markers on matrix -->
+    <g fill="#111827" font-size="11" font-weight="600">
+      <!-- AI Phishing: L=5, I=4 => cell (3,0) center x=280, y=40 -->
+      <circle cx="280" cy="40" r="14" fill="#00D4FF" fill-opacity="0.15" stroke="#00D4FF" stroke-width="2"/>
+      <text x="280" y="44" text-anchor="middle" fill="#0099CC" font-size="10">AI Phish</text>
+      
+      <!-- RaaS: L=4, I=5 => cell (4,1) center x=360, y=120 -->
+      <circle cx="360" cy="120" r="14" fill="#EF4444" fill-opacity="0.15" stroke="#EF4444" stroke-width="2"/>
+      <text x="360" y="124" text-anchor="middle" fill="#B91C1C" font-size="10">RaaS</text>
+      
+      <!-- Cloud: L=4, I=4 => cell (3,1) center x=280, y=120 -->
+      <circle cx="280" cy="120" r="14" fill="#F97316" fill-opacity="0.15" stroke="#F97316" stroke-width="2"/>
+      <text x="280" y="124" text-anchor="middle" fill="#C2410C" font-size="10">Cloud</text>
+      
+      <!-- Zero-Day: L=3, I=5 => cell (4,2) center x=360, y=200 -->
+      <circle cx="360" cy="200" r="14" fill="#A855F7" fill-opacity="0.15" stroke="#A855F7" stroke-width="2"/>
+      <text x="360" y="204" text-anchor="middle" fill="#7C3AED" font-size="10">Zero-Day</text>
+      
+      <!-- IoT: L=3, I=3 => cell (2,2) center x=200, y=200 -->
+      <circle cx="200" cy="200" r="14" fill="#22C55E" fill-opacity="0.15" stroke="#22C55E" stroke-width="2"/>
+      <text x="200" y="204" text-anchor="middle" fill="#16A34A" font-size="10">IoT</text>
+    </g>
+    
+    <!-- Score labels in cells (top-right of each occupied cell) -->
+    <g fill="#6B7280" font-size="9" font-weight="500" text-anchor="end">
+      <text x="355" y="15">20</text>  <!-- AI Phishing -->
+      <text x="435" y="95">20</text>  <!-- RaaS -->
+      <text x="355" y="95">16</text>  <!-- Cloud -->
+      <text x="435" y="175">15</text>  <!-- Zero-Day -->
+      <text x="275" y="175">9</text>   <!-- IoT -->
+    </g>
+    
+    <!-- Rating badges -->
+    <g font-size="8" font-weight="600" text-anchor="middle">
+      <text x="280" y="60" fill="#991B1B" class="risk-badge">CRITICAL</text>
+      <text x="360" y="140" fill="#991B1B" class="risk-badge">CRITICAL</text>
+      <text x="280" y="140" fill="#991B1B" class="risk-badge">CRITICAL</text>
+      <text x="360" y="220" fill="#9A3412" class="risk-badge">HIGH</text>
+      <text x="200" y="220" fill="#854D0E" class="risk-badge">MEDIUM</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(500, 80)">
+    <rect x="0" y="0" width="180" height="160" fill="white" stroke="#E5E7EB" rx="8"/>
+    <text x="10" y="22" font-size="12" font-weight="600" fill="#111827">Risk Rating</text>
+    <g transform="translate(10, 30)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="16" height="16" fill="url(#critGrad)" stroke="#FECACA"/>
+        <text x="22" y="12" font-size="10" fill="#991B1B" font-weight="600">Critical (16–25)</text>
+      </g>
+      <g transform="translate(0, 28)">
+        <rect x="0" y="0" width="16" height="16" fill="url(#highGrad)" stroke="#FED7AA"/>
+        <text x="22" y="12" font-size="10" fill="#9A3412" font-weight="600">High (10–15)</text>
+      </g>
+      <g transform="translate(0, 56)">
+        <rect x="0" y="0" width="16" height="16" fill="url(#medGrad)" stroke="#FDE047"/>
+        <text x="22" y="12" font-size="10" fill="#854D0E" font-weight="600">Medium (5–9)</text>
+      </g>
+      <g transform="translate(0, 84)">
+        <rect x="0" y="0" width="16" height="16" fill="url(#lowGrad)" stroke="#BBF7D0"/>
+        <text x="22" y="12" font-size="10" fill="#166534" font-weight="600">Low (1–4)</text>
+      </g>
+    </g>
+    <text x="10" y="140" font-size="9" fill="#6B7280" style="font-style: italic;">Score = Likelihood × Impact</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="100" y="45" font-size="14" font-weight="600" fill="#0B1D3A">Illustrative 5×5 Risk Matrix — Hypothetical 200-Employee SME</text>
+  <text x="100" y="62" font-size="10" fill="#6B7280">Assumptions: M365, hybrid cloud, VPN appliance, SOHO routers, basic MFA, no dedicated SOC. Ratings are qualitative analyst judgments, not empirical scores.</text>
+</svg>
